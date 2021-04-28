@@ -1,0 +1,91 @@
+<html>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background: rgb(46, 245, 89);
+        }
+        .main
+        {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10%;
+            height: 16em;
+            width: 15em;
+            box-shadow: 9px 11px 51px 13px rgba(0,0,0,0.67);
+           -webkit-box-shadow: 9px 11px 51px 13px rgba(0,0,0,0.67);
+           -moz-box-shadow: 9px 11px 51px 13px rgba(0,0,0,0.67);
+            background: rgb(235, 235, 238);
+            border-radius: 5px;
+        }
+        h1
+        {
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+            font-family: sans-serif;
+           
+        }
+        .second
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        .button, .button2
+        {
+            margin: 5px;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+            font-family: sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            border-color: transparent;
+            box-shadow: 9px 11px 51px 13px rgba(233, 227, 227, 0.67);
+           -webkit-box-shadow: 9px 11px 51px 13px rgba(204, 192, 192, 0.67);
+           -moz-box-shadow: 9px 11px 51px 13px rgba(194, 190, 190, 0.67);
+            background: rgb(137, 241, 96);
+            text-decoration: none;
+        }
+        .button:hover, .button2:hover
+        {
+            box-shadow: 9px 11px 51px 13px rgba(233, 227, 227, 0.67);
+           -webkit-box-shadow: 9px 11px 51px 13px rgba(131, 123, 123, 0.67);
+           -moz-box-shadow: 9px 11px 51px 13px rgba(153, 141, 141, 0.67);
+        }
+        @media screen and (max-width: 992px) {
+            h1
+            {
+                font-size: 80px;
+            }
+  .main {
+    height: 40em;
+    width: 40em;
+  }
+  .button, .button2
+  {
+      margin: 20px;
+      height: 100px;
+      width: 200px;
+      font-size: 30px;
+  }
+}
+    </style>
+    <head>
+        <body>
+            <div class="main">
+                    <h1><%= data %>$</h1>
+                    <div class="second">
+                <a href="/addmoney"><button class="button">Add Money</button></a>
+                <a href="/sendmoney"><button class="button2">Send Money</button></a> 
+            </div>
+            </div>
+        </body>
+    </head>
+</html>

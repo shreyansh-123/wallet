@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            .main
+            {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+                font-family: sans-serif;
+            }
+            h2
+            {
+                margin: 10px;
+                border-bottom: 1px solid #000;
+            }
+            .divmain
+            {
+                display: flex;
+                flex-direction: row;
+            }
+        </style>
+        <body>
+            <h1>Transaction History</h1>
+            <div class="main">
+                <% dataa.forEach(element => { %>
+                    <div class="divmain">
+                        <h2> <%= element.email %> </h2><br>
+                    <h2> <%= element.tamount %>$ </h2>
+                    <h2> <%= element.time %> </h2>
+                    </div>
+                <% }) %>
+            </div>
+        </body>
+    </head>
+</html>

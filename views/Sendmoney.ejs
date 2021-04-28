@@ -1,0 +1,113 @@
+<html>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background: rgb(46, 245, 89);
+        }
+        .main
+        {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10%;
+            height: 16em;
+            width: 15em;
+            box-shadow: 9px 11px 51px 13px rgba(0,0,0,0.67);
+           -webkit-box-shadow: 9px 11px 51px 13px rgba(0,0,0,0.67);
+           -moz-box-shadow: 9px 11px 51px 13px rgba(0,0,0,0.67);
+            background: rgb(253, 253, 255);
+            border-radius: 5px;
+        }
+        .input
+        {
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin-bottom: 10px;
+          font-family: sans-serif;
+          border: none;
+          border-bottom: 1px solid #000;
+           
+        }
+        .button
+        {
+            display: grid;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+            font-family: sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            border-color: transparent;
+            box-shadow: 9px 11px 51px 13px rgba(233, 227, 227, 0.67);
+           -webkit-box-shadow: 9px 11px 51px 13px rgba(204, 192, 192, 0.67);
+           -moz-box-shadow: 9px 11px 51px 13px rgba(194, 190, 190, 0.67);
+            background: rgb(137, 241, 96);
+        }
+        .button:hover
+        {
+            box-shadow: 9px 11px 51px 13px rgba(233, 227, 227, 0.67);
+           -webkit-box-shadow: 9px 11px 51px 13px rgba(131, 123, 123, 0.67);
+           -moz-box-shadow: 9px 11px 51px 13px rgba(153, 141, 141, 0.67);
+        }
+        .form
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        @media screen and (max-width: 992px) {
+  .main {
+    height: 40em;
+    width: 40em;
+  }
+  .button, .button2
+  {
+      margin-top: 50px;
+      transform: translateX(120px);
+      height: 80px;
+      width: 200px;
+      font-size: 30px;
+  }
+  .input
+  {
+      margin: 20px;
+      font-size: 30px;
+  }
+}
+    </style>
+    <head>
+        <body>
+            <div class="main">
+                <form action="/sendmoney" method="POST" class="form">
+                <input type="number" id="input" class="input" placeholder="Enter amount" name="sendamount">
+                <input type="email" id="email" class="input" placeholder="Enter Email" name="senderemail" required>
+                <button class="button" id="button" disabled=true>Send Money</button>
+                </form>
+            </div>
+        </body>
+    </head>
+    <script>
+        const input = document.getElementById('input');
+        const reg = new RegExp('^[0-9]+$');
+        input.addEventListener('input', go);
+
+
+        function go(e) {
+            const validate = reg.test(e.target.value)
+       if(validate)
+       {
+          const button = document.getElementById('button').disabled = false;
+       }
+       else
+       {
+           const button = document.getElementById('button').disabled = true;
+       }
+        }
+    </script>
+</html>
