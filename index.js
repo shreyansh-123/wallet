@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const ejs = require('ejs');
 const mongoose = require('mongoose');
-const port  = 5010;
+const port  = process.env.PORT || 5010;
 const User = require('./modal/db')
 app.set('view engine', 'ejs')
 const randtoken = require('rand-token');
